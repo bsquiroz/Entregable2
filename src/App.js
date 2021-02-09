@@ -16,7 +16,7 @@ function App() {
     const longitude = position.coords.longitude;
 
     if(latitude && longitude){
-      const Url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=3f1574f306d707fe4b6696b1dc626538`;
+      const Url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=3f1574f306d707fe4b6696b1dc626538`;
       fetch(Url)
         .then((response) => response.json())
         .then((data) => setWeather(data));
